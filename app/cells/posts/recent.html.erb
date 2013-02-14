@@ -1,0 +1,12 @@
+<div class="span3">
+	<div class="well sidebar-nav">
+    	<ul class="nav nav-list" id="menu">
+    		<li class="nav-header">Recent posts</li>
+    		<ul>
+				<% @posts.each do |post| %>
+					<li><%= link_to post.title, :action => :show, :id => post.id %></li>
+				<% end %>
+			</ul>
+    	</ul>
+	</div>
+</div>

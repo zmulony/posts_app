@@ -1,0 +1,29 @@
+<%= render_cell :posts, :recent %>
+
+<div class="span9">
+  <div class="hero-unit">
+    <h1>Hello!</h1>
+    <p>This is a simple posts site featuring gem Cells.</p>
+    <p><a href="https://github.com/apotonick/cells" class="btn btn-primary btn-large">Learn more about Cells&raquo;</a></p>
+  </div>
+
+  <p class="btn btn-primary btn-large"><%= link_to "New Post", new_post_path %></p>
+
+  <div class="row-fluid">
+    <% @posts.each do |post| %>
+      <div class="span3">
+        <% if post.title.length < 5 %>
+          <h2><%= post.title %></h2>
+        <% end %>
+        <% if post.title.length >= 5 %>
+          <h2><%= post.title[0..5] %>...</h2>
+        <% end %>
+        <p>
+          <p class="btn"><%= link_to "Show", post %></p>
+          <p class="btn"><%= link_to "Edit", edit_post_path(post) %></p>
+          <p class="btn"><%= link_to "Destroy", post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        </p>
+      </div>
+    <% end %>
+  </div>
+</div>
