@@ -7,6 +7,8 @@
     <p><a href="https://github.com/apotonick/cells" class="btn btn-primary btn-large">Learn more about Cells&raquo;</a></p>
   </div>
 
+  <%= render_cell :posts, :count %>
+  <p>Use the button below to create your own post:</p>
   <p class="btn btn-primary btn-large"><%= link_to "New Post", new_post_path %></p>
 
   <div class="row-fluid">
