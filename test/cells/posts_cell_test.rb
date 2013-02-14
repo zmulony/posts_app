@@ -5,6 +5,4 @@ class PostsCellTest < Cell::TestCase
     invoke :recent
     assert_select "p"
   end
-  
-
 end

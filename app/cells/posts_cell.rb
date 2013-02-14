@@ -5,4 +5,8 @@ class PostsCell < Cell::Rails
     render
   end
 
+  def count
+  	@count = Post.find(:all).size
+    render
+  end
 end
